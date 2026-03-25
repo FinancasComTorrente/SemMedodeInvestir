@@ -214,6 +214,13 @@
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
 
+    <!-- Mobile Theme Toggle -->
+    <button id="mobile-theme-toggle"
+        class="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full flex items-center justify-center bg-surface border border-outline/30 text-on-surface shadow-xl md:hidden transition-all active:scale-95">
+        <span class="material-symbols-outlined text-[24px] dark:hidden">light_mode</span>
+        <span class="material-symbols-outlined text-[24px] hidden dark:block">dark_mode</span>
+    </button>
+
     <!-- Navbar -->
     <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-2xl border border-white/10 bg-slate-950/70 backdrop-blur-xl z-50 hidden md:flex justify-between items-center px-8 py-3 shadow-[0_20px_40px_rgba(3,19,43,0.4)] transition-all duration-300"
         id="navbar">
@@ -1188,15 +1195,20 @@
             });
 
             // Theme Toggle Logic
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            themeToggleBtn.addEventListener('click', () => {
-                const html = document.documentElement;
-                if (html.classList.contains('dark')) {
-                    html.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                } else {
-                    html.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
+            const themeToggles = ['theme-toggle', 'mobile-theme-toggle'];
+            themeToggles.forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        const html = document.documentElement;
+                        if (html.classList.contains('dark')) {
+                            html.classList.remove('dark');
+                            localStorage.setItem('theme', 'light');
+                        } else {
+                            html.classList.add('dark');
+                            localStorage.setItem('theme', 'dark');
+                        }
+                    });
                 }
             });
 
