@@ -25,6 +25,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo-quadrada.png" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -212,10 +215,10 @@
 <body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
 
     <!-- Navbar -->
-    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-2xl border border-white/10 bg-slate-950/70 backdrop-blur-xl z-50 flex justify-between items-center px-8 py-4 shadow-[0_20px_40px_rgba(3,19,43,0.4)] transition-all duration-300"
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-2xl border border-white/10 bg-slate-950/70 backdrop-blur-xl z-50 flex justify-between items-center px-8 py-3 shadow-[0_20px_40px_rgba(3,19,43,0.4)] transition-all duration-300"
         id="navbar">
-        <div class="text-xl font-bold tracking-tighter text-amber-500 font-headline">
-            Sem Medo de Investir
+        <div class="flex items-center">
+            <img src="assets/img/logo-horizontal.png" alt="Sem Medo de Investir" class="h-6 md:h-8 w-auto py-1" />
         </div>
         <div class="hidden md:flex gap-8 items-center">
             <a class="font-label text-slate-300 hover:text-amber-200 transition-colors uppercase tracking-widest text-sm"
@@ -487,19 +490,45 @@
                 </div>
             </div>
 
-            <div
-                class="w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden relative mb-20 shadow-2xl group reveal">
-                <img alt="Lifestyle"
-                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTv_NDN-vUUkMOsQLTZi_KPb4sTCIOw5Iu-_pWzSDupqiaJuelNdV5QZszzNBVEQtxqlGBQMFGYjIwW1J9zwlEeQlq4ob_q2Vl9hietuZu-68Or0E_3keoJ9M0vYc2V1twuR2xF9XVxSFt9kJEY3rp_PvecVEAzUJzg9GmHraWQpRcLTGc98HQm1PCRmwQjMTn-ye7VpiVKleUmj6T_y0rpF8B_v8XCSpJ1nZcSq0u1LlJ7HX1u0jGMRhaBVdj5ROjIgS_HPhM6kI" />
-                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80">
-                </div>
-                <div class="absolute bottom-12 left-10 md:left-12 max-w-lg">
-                    <h2 class="font-headline text-3xl font-bold text-on-background mb-4">A autoridade que o seu dinheiro
-                        merece.</h2>
-                    <div class="w-20 h-1 bg-primary rounded-full mb-6"></div>
-                    <p class="text-on-surface-variant italic font-body">"Investir não é sobre adivinhar o futuro, é
-                        sobre estar preparado para qualquer cenário."</p>
+            <div class="mb-20 reveal">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-12 glass-card rounded-[2.5rem] p-4 md:p-10 border border-outline-variant/10 overflow-hidden group shadow-2xl">
+                    <!-- Image Box -->
+                    <div class="w-full md:w-1/2 h-[450px] md:h-[650px] rounded-[2rem] overflow-hidden relative shadow-xl">
+                        <img alt="Matheus Torrente - Autoridade em Investimentos"
+                            class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                            src="assets/img/autor-premium.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/30 to-transparent"></div>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="w-full md:w-1/2 space-y-10 p-4 md:p-6">
+                        <div class="space-y-6">
+                            <h2
+                                class="font-headline text-4xl md:text-6xl font-bold text-on-background leading-tight tracking-tighter">
+                                A autoridade que o seu <br /> dinheiro <span class="text-primary italic">merece.</span>
+                            </h2>
+                            <div class="w-24 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <div class="space-y-8">
+                            <p
+                                class="text-xl md:text-2xl text-on-surface-variant italic font-body leading-relaxed border-l-4 border-primary/20 pl-8 py-2">
+                                "Investir não é sobre adivinhar o futuro, é sobre estar preparado para qualquer
+                                cenário."
+                            </p>
+                            <div class="flex items-center gap-6 pt-6 translate-y-4 opacity-80">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+                                    <span class="material-symbols-outlined text-3xl">verified</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-label uppercase tracking-[0.2em] text-primary font-bold mb-1">
+                                        Estrategista Senior</p>
+                                    <p class="text-sm text-on-surface-variant font-medium">Método Torrente de Gestão
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -681,9 +710,7 @@
                         </h2>
                     </div>
                     <p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl font-light">
-                        Especialista em engenharia financeira e gestão de ativos. Matheus passou mais de uma década
-                        desconstruindo as complexidades do mercado em metodologias de alto rendimento para o investidor
-                        moderno.
+                        Economista e educador financeiro apaixonado por simplificar os investimentos. Matheus dedica sua carreira a democratizar o conhecimento sobre construção de patrimônio, ajudando milhares de pessoas a investirem com segurança e estratégia desde os primeiros passos.
                     </p>
                     <!-- Experience grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -694,11 +721,11 @@
                                 <span class="material-symbols-outlined text-3xl md:text-4xl">workspace_premium</span>
                             </div>
                             <div>
-                                <div class="text-2xl md:text-3xl font-headline font-bold text-on-background">10+ Anos
+                                <div class="text-2xl md:text-3xl font-headline font-bold text-on-background">YouTube
                                 </div>
                                 <div
                                     class="text-[10px] md:text-xs font-label uppercase tracking-widest text-primary/70">
-                                    Autoridade de Mercado</div>
+                                    Educação Financeira</div>
                             </div>
                         </div>
 
@@ -709,11 +736,11 @@
                                 <span class="material-symbols-outlined text-3xl md:text-4xl">account_balance</span>
                             </div>
                             <div>
-                                <div class="text-2xl md:text-3xl font-headline font-bold text-on-background">+ R$ 6 Mi
+                                <div class="text-2xl md:text-3xl font-headline font-bold text-on-background">Simplificado
                                 </div>
                                 <div
                                     class="text-[10px] md:text-xs font-label uppercase tracking-widest text-primary/70">
-                                    Clientes Sob Gestão</div>
+                                    Método de Investimento</div>
                             </div>
                         </div>
                     </div>
@@ -724,7 +751,7 @@
                         <div class="absolute inset-0 bg-surface">
                             <img alt="Matheus Torrente"
                                 class="w-full h-full object-cover grayscale contrast-125 portrait-gradient"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAyCgkSaaEJJR2uuE4YEGaErGbU3vdkDCLoyCfpVYEW0zt_xI6-wd2nxxUMEoehdc2SlhQjU4JvidybCRAo0wrbmAAyMzcLYZcZKQvf3tnM2TDNloVQdqz8zv621-50mANNJrExTJTpHcqm1ZNbeh0KFor82xwzgdKvfP0Fup8O1IehcuqEa6BCeOVQg0bZDoPRlgbEOnSqyaiMMwSacxxCxM43hDShGGbqNLitldz5o2OiTYIXoXeTCB6rig49LcUx8WH4ods0Xs" />
+                                src="assets/img/foto-autor.jpg" />
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60">
